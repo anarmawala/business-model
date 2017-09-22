@@ -1,0 +1,175 @@
+<div class="tile is-ancestor">
+  <div class="tile is-vertical">
+    <div class="tile is-parent">
+      <div class="tile is-parent is-one-fifth">
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/kpartner_new" class="button">Key Partner</a></strong>
+            <br>
+            <ul>
+              <% KPartner.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/kpartner_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/kpartner_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent is-one-fifth is-vertical">
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/kactivity_new" class="button">Key Activity</a></strong>
+            <br>
+            <ul>
+              <% KActivity.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/kactivity_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/kactivity_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/kresource_new" class="button">Key Resource</a></strong>
+            <br>
+            <ul>
+              <% KResource.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/kresource_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/kresource_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent is-one-fifth">
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/vproposition_new" class="button">Value Proposition</a></strong>
+            <br>
+            <ul>
+              <% VProposition.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/vproposition_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/vproposition_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent is-one-fifth is-vertical">
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/crelationship_new" class="button">Customer Relationship</a></strong>
+            <br>
+            <ul>
+              <% CRelationship.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/crelationship_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/crelationship_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/channel_new" class="button">Channel</a></strong>
+            <br>
+            <ul>
+              <% Channel.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/channel_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/channel_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent is-one-fifth">
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/csegment_new" class="button">Customer Segment</a></strong>
+            <br>
+            <ul>
+              <% CSegment.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/csegment_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/csegment_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/ctstructure_new" class="button">Cost Structure</a></strong>
+            <br>
+            <ul>
+              <% CtStructure.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/ctstructure_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/ctstructure_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <div class="content">
+            <strong><a href="/revstream_new" class="button">Revenue Stream</a></strong>
+            <br>
+            <ul>
+              <% RevStream.all.each do |bullet|%>
+              <li>
+                <span class=<%= "has-text-grey" if bullet.code == "0" %> <%= "has-text-black" if bullet.code == "1" %>>
+                  <%= bullet.bullet %>
+                </span>
+                <br>
+                <a href="/revstream_edit/<%= bullet.id %>" class="has-text-info">Edit</a> <a href="/revstream_delete/<%= bullet.id %>" class="has-text-danger">Delete</a>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
